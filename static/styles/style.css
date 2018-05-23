@@ -1,0 +1,106 @@
+* {
+	/*border: 1px solid red !important;*/
+}
+.header {
+	background-color: #1C8ADB;
+}
+.container-dim {
+	margin-left: 25%;
+	width: 75%;
+	height: 100%;
+}
+.home {
+	font-size: 25px;
+	padding-left: 5px;
+
+}
+a.home: hover {
+	background-color: green; //not working - why?
+}
+/*.header{
+	background-color: #336E9F;
+}
+.dropdown-color {
+	color: blue;
+	background-color: #fff;
+}*/
+#dropdown1.li.a: hover {
+	color: white;
+	background-color: #1C8ADB;
+}
+.limit {
+	max-height: 80%;
+	margin-top: 20%;
+	margin-left: 5%;
+}
+.logo {
+	text-align: center;
+	margin-top: 32px;
+	margin-bottom: 80px;
+}
+#logo.container {
+	height: 57px;
+	margin-bottom: 32px;
+}
+.small-image {
+	height: 100px;
+}
+.header-landing {
+	width: 100%;
+}
+.card-dim {
+	height: 150px;
+}
+.card-text {
+	font-size: 36px;
+}
+.row-offset {
+	margin: 30px 0px 0px 0px;
+}
+/*.custom-marg {
+	margin-right: 50px;
+}
+.title-align {
+	top: 0px;
+}*/
+.upvote {
+  display: inline-block;
+  overflow: hidden;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  background: url('../images/upvote.png');
+  background-position: 0 -25px;
+} 
+
+.upvote.on {
+  background-position: 0 2px;
+}
+
+.downvote {
+  display: inline-block;
+  overflow: hidden;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  background: url('../images/downvote.png');
+  background-position: -3px -7px;
+}
+
+.downvote.on {
+  background-position: -3px -34px;
+}
+.votes {
+	padding-left: 10px;
+	font-size: 20px;
+	margin-top: -6px;
+}
+.boxed {
+	border: 1px solid black;
+}
+.cont-marg {
+	margin-top: 100px;
+}
+.form-bs {
+	padding-top: 5px;
+}
