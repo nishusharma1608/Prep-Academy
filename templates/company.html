@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Company prep links</title>
+ 
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="/static/materialize/css/materialize.min.css"  media="screen,projection"/>
+        
+        <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+        <div class="container container-dim">
+            <div class="row">
+                <div class="col s12">
+                    <ul id="dropdown1" class="dropdown-content">
+                        <!-- <li><a href="/signout">Add Link</a></li>
+                        <li class="divider"></li> -->
+                        <li><a href="/signout">Sign Out</a></li>
+                        <li class="divider"></li>
+                    </ul> 
+                    <nav class="header">
+                        <div class="nav-wrapper">
+                            <a href="/landing_page/{{ name }}" class="home">Prepacademy</a>
+                            <p class="brand-logo center" style="margin-top: 0px">{{ company }}</p>
+                            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                <li><a href="/submit/" class="right">Add Link</a></li>
+                                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{ name }}<i class="material-icons right">arrow_drop_down</i></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-dim">
+            <div class="row">
+                <div class="col s1 arrow-up">
+                    <span class="upvote"> </span>
+                    <div class="votes">23</div>
+                    <span class="downvote"> </span>
+                </div>
+                <!-- <div class="col s1"></div> -->
+                <div class="col s9 boxed">
+                    <a href="http://www.geeksforgeeks.org/java/">http://www.geeksforgeeks.org/java/</a>
+                    <p>A programming tutorial in Java from geeks for geeks</p>
+                    <div class="chip">C
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <div class="chip">Microsoft
+                        <i class="close material-icons">close</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul id="slide-out" class="side-nav fixed">
+            <li class="logo">
+                <a id="logo-container" href="{{url_for('landing_page', name = name)}}" class="brand-logo">
+                    <img class="small-image" src="/static/images/icon.png">
+                </a>
+            </li>
+            <li class="divider"></li>
+            {% for sub in subs %}
+            <li><a href="{{ url_for('subjects', company = company , subject=sub[0]) }}">{{ sub[0] }}</a></li>
+            <li class="divider"></li>
+            {% endfor %}
+            
+        </ul>
+
+
+        <div>
+            {% if details %}
+                <p>{{details}}</p>
+            {% endif %}
+        </div>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+        <script type="text/javascript" src="/static/scripts/jquery.js"></script>
+        <script type="text/javascript" src="/static/scripts/script.js"></script>
+        <script type="text/javascript" src="/static/materialize/js/materialize.min.js"></script>
+    </body>
+</html>
